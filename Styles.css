@@ -1,0 +1,204 @@
+:root {
+    --color-primary: #4A90E2; /* Azul principal */
+    --color-secondary: #E0F7FA; /* Fondo claro */
+    --color-tertiary: #B0BEC5; /* Gris claro */
+    --color-button: #0288D1; /* Azul oscuro */
+    --color-button-hover: #0277BD; /* Azul más oscuro */
+    --color-text: #37474F; /* Texto oscuro */
+    --color-white: #FFFFFF; /* Blanco */
+    --color-message: #00796B; /* Color para los mensajes */
+    --color-section-bg: #BBDEFB; /* Azul más claro */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.header-banner {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-secondary);
+    z-index: 1000;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.image-container {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: var(--color-secondary);
+    padding: 5px 0;
+}
+
+.image-container img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+    margin-top: 150px; /* Ajustar según el tamaño de la imagen */
+    overflow-y: auto;
+}
+
+.input-section, .message-section {
+    background-color: var(--color-section-bg);
+    border: 1px solid var(--color-tertiary);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 10px;
+}
+
+.main-title {
+    font-size: 36px;
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+    color: var(--color-primary);
+}
+
+.section-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 5px 0;
+    text-align: center;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.input-name {
+    width: 70%;
+    padding: 5px;
+    border: 2px solid var(--color-tertiary);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.button-add, .button-draw {
+    background-color: var(--color-button);
+    color: var(--color-white);
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.button-add:hover, .button-draw:hover {
+    background-color: var(--color-button-hover);
+}
+
+ul {
+    list-style-type: none;
+    color: var(--color-text);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin: 5px 0;
+    width: 100%;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li {
+    width: 33.33%; /* Tres columnas */
+    text-align: left;
+    padding-left: 10px;
+}
+
+.result-list {
+    margin-top: 5px;
+    color: var(--color-primary);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.button-remove {
+    margin-top: 5px;
+    color: var(--color-white);
+    background-color: #E53E3E;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.button-remove:hover {
+    background-color: #C53030;
+}
+
+#seccion-sorteo {
+    display: none; /* Ocultar inicialmente */
+}
+
+#mensaje {
+    font-weight: bold;
+    color: var(--color-message);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.animacion-revelar {
+    animation: revelar 1s ease-in-out;
+}
+
+@keyframes revelar {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
